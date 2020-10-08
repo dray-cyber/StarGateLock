@@ -164,6 +164,10 @@ def arraycheck():
     global seq9
     global vardata
     global ourvar
+    global theimage
+    global thefileweneed
+    global photot
+    global photoimaget
     liste = len(sequence)
     ourvar = 0
     if liste == 1:
@@ -176,12 +180,11 @@ def arraycheck():
             else:
                 ourvarright = True
                 thedata = str(ourvar)
-                theimage = "g" + thedata + ".png"
+                theimage = 'g' + thedata + '.png'
                 thefileweneed = str(theimage)
                 photot = PhotoImage(file=thefileweneed)
-                print(photot)
-                photoimaget = photot.subsample(2, 2)
-                Button(root, image=photoimage35).place(x=1044, y=105)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=1035, y=105)
 
     if liste == 2:
         seq2 = sequence[1]
@@ -343,8 +346,8 @@ def sym13():
     global sequence
     if arraystatus <10:
         sequence.append("sym13")
-        arraycheck()
         vardata = 13
+        arraycheck()
 def sym14():
     global symb14
     global vardata
@@ -354,8 +357,8 @@ def sym14():
     global sequence
     if arraystatus <10:
         sequence.append("sym14")
-        arraycheck()
         vardata = 14
+        arraycheck()
 def sym15():
     global symb15
     global vardata
@@ -365,8 +368,8 @@ def sym15():
     global sequence
     if arraystatus <10:
         sequence.append("sym15")
-        arraycheck()
         vardata = 15
+        arraycheck()
 def sym16():
     global symb16
     global vardata
@@ -376,8 +379,8 @@ def sym16():
     global sequence
     if arraystatus <10:
         sequence.append("sym16")
-        arraycheck()
         vardata = 16
+        arraycheck()
 def sym17():
     global symb17
     global vardata
@@ -387,8 +390,8 @@ def sym17():
     global sequence
     if arraystatus <10:
         sequence.append("sym17")
-        arraycheck()
         vardata = 17
+        arraycheck()
 def sym18():
     global symb18
     global vardata
@@ -398,8 +401,8 @@ def sym18():
     global sequence
     if arraystatus <10:
         sequence.append("sym18")
-        arraycheck()
         vardata = 18
+        arraycheck()
 def sym19():
     global symb19
     global vardata
@@ -409,8 +412,8 @@ def sym19():
     global sequence
     if arraystatus <10:
         sequence.append("sym19")
-        arraycheck()
         vardata = 19
+        arraycheck()
 
 def sym20():
     global symb20
@@ -421,8 +424,8 @@ def sym20():
     global sequence
     if arraystatus <10:
         sequence.append("sym20")
-        arraycheck()
         vardata = 20
+        arraycheck()
 def sym21():
     global symb21
     global vardata
@@ -432,8 +435,8 @@ def sym21():
     global sequence
     if arraystatus <10:
         sequence.append("sym21")
-        arraycheck()
         vardata = 21
+        arraycheck()
 def sym22():
     global symb22
     global vardata
@@ -443,8 +446,8 @@ def sym22():
     global sequence
     if arraystatus <10:
         sequence.append("sym22")
-        arraycheck()
         vardata = 22
+        arraycheck()
 def sym23():
     global symb23
     global vardata
@@ -454,8 +457,8 @@ def sym23():
     global sequence
     if arraystatus <10:
         sequence.append("sym23")
-        arraycheck()
         vardata = 23
+        arraycheck()
 def sym24():
     global symb24
     global vardata
@@ -465,8 +468,8 @@ def sym24():
     global sequence
     if arraystatus <10:
         sequence.append("sym24")
-        arraycheck()
         vardata = 24
+        arraycheck()
 def sym25():
     global symb25
     global vardata
@@ -476,8 +479,8 @@ def sym25():
     global sequence
     if arraystatus <10:
         sequence.append("sym25")
-        arraycheck()
         vardata = 25
+        arraycheck()
 def sym26():
     global symb26
     global vardata
