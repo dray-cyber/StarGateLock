@@ -411,9 +411,11 @@ def reset():
     global sequence
     sequence.clear()
 
-Label(root, text='StarGateLock', font=(
-    'Verdana', 15)).pack(side=TOP, pady=10)
-
+img = PhotoImage(file=r'background.png')
+w, h = img.width(), img.height()
+background_image=img
+background_label = Label(root, image=background_image)
+background_label.place(x=0, y=25, relwidth=1, relheight=1)
 
 photo1 = PhotoImage(file=r"g1.png")
 photo2 = PhotoImage(file=r"g2.png")
@@ -629,13 +631,5 @@ root.attributes('-fullscreen', True)
 root.resizable(False, False)
 root.attributes('-topmost', True)
 root.protocol("WM_DELETE_WINDOW", on_closing)
-wenh = root.winfo_height()
-wenw = root.winfo_width()
-print(wenw)
-print(wenh)
-canvas = Canvas(root, width = 400, height = 400)
-canvas.pack()
-img = PhotoImage(file=r"background.png")
-canvas.create_image(wenw,wenh, anchor=NW, image=img)
 
 mainloop()
