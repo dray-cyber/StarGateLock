@@ -395,6 +395,8 @@ def symdome():
         f = open('data.json', )
         data = json.load(f)
         comparestring = str(data)
+        print(comparestring)
+        print("json data ^^^ your datas below")
         print(datacompare)
         if datacompare == comparestring:
             print("all your code works you may login")
