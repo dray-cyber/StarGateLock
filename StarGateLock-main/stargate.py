@@ -48,375 +48,18 @@ if apple != 1:
     symb36 = 0
     symb37 = 0
     symb38 = 0
+    seq1 = 0
+    seq2 = 0
+    seq3 = 0
+    seq4 = 0
+    seq5 = 0
+    seq6 = 0
+    seq7 = 0
+    seq8 = 0
+    seq9 = 0
     apple = 1
+    ourvar = 0
     print("im not still running right")
-arraystatuse = arraystatus
-print(arraystatus)
-global sequence
-sequence = []
-def sym1():
-    global symb1
-    symb1 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        print(arraystatus)
-        sequence.append("sym1")
-        print(sequence)
-def sym2(sy1=symb1):
-    global symb2
-    symb2 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym2")
-def sym3():
-    global symb3
-    symb3 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym3")
-def sym4():
-    global symb4
-    symb4 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym4")
-def sym5():
-    global symb5
-    symb5 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym5")
-def sym6():
-    global symb6
-    symb6 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym6")
-def sym7():
-    global symb7
-    symb7 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym7")
-def sym8():
-    global symb8
-    symb8 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym8")
-def sym9():
-    global symb9
-    symb9 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym9")
-def sym10():
-    global symb10
-    symb10 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym10")
-def sym11():
-    global symb11
-    symb11 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym11")
-def sym12():
-    global symb12
-    symb12 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym12")
-def sym13():
-    global symb13
-    symb13 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym13")
-def sym14():
-    global symb14
-    symb14 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym14")
-def sym15():
-    global symb15
-    symb15 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym15")
-def sym16():
-    global symb16
-    symb16 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym16")
-def sym17():
-    global symb17
-    symb17 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym17")
-def sym18():
-    global symb18
-    symb18 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym18")
-def sym19():
-    global symb19
-    symb19 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym19")
-
-def sym20():
-    global symb20
-    symb20 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym20")
-def sym21():
-    global symb21
-    symb21 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym21")
-def sym22():
-    global symb22
-    symb22 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym22")
-def sym23():
-    global symb23
-    symb23 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym23")
-def sym24():
-    global symb24
-    symb24 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym24")
-def sym25():
-    global symb25
-    symb25 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym25")
-def sym26():
-    global symb26
-    symb26 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym26")
-def sym27():
-    global symb27
-    symb27 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym27")
-def sym28():
-    global symb28
-    symb28 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym28")
-def sym29():
-    global symb29
-    symb29 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym29")
-
-
-def sym30():
-    global symb30
-    symb30 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym30")
-
-
-def sym31():
-    global symb31
-    symb31 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym31")
-
-
-def sym32():
-    global symb32
-    symb32 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym32")
-
-
-def sym33():
-    global symb33
-    symb33 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym33")
-
-
-def sym34():
-    global symb34
-    symb34 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym34")
-
-
-def sym35():
-    global symb35
-    symb35 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym35")
-
-
-def sym36():
-    global symb36
-    symb36 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym36")
-
-
-def sym37():
-    global symb37
-    symb37 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym37")
-
-
-def sym38():
-    global symb38
-    symb38 = 1
-    global arraystatus
-    arraystatus = arraystatus + 1
-    global sequence
-    if arraystatus <10:
-        sequence.append("sym38")
-
-def symdome():
-    global sequence
-    stargatecode = Path("data.json")
-    sequencestr = str(sequence)
-    datat = sequencestr.replace(", ", "")
-    datatt = datat.replace("\'", " ")
-    datattt = datatt.replace("[", "")
-    datatttt = datattt.replace("   ", "  ")
-    datattttt = datatttt.replace("]", "")
-    finaldata = datattttt.replace("\"", "")
-    datacompare = finaldata.replace("  ", " ")
-    if stargatecode.is_file():
-        f = open('data.json', )
-        data = json.load(f)
-        comparestring = str(data)
-        print(comparestring)
-        print("json data ^^^ your datas below")
-        print(datacompare)
-        if datacompare == comparestring:
-            print("all your code works you may login")
-            root.destroy()
-            f.close
-    else:
-        print("creating new file")
-        with open('data.json', 'w') as f:
-            json.dump(datacompare, f)
-            f.close
-def reset():
-    global sequence
-    sequence.clear()
-
-img = PhotoImage(file=r'background.png')
-w, h = img.width(), img.height()
-background_image=img
-background_label = Label(root, image=background_image)
-background_label.place(x=0, y=25, relwidth=1, relheight=1)
-
 photo1 = PhotoImage(file=r"g1.png")
 photo2 = PhotoImage(file=r"g2.png")
 photo3 = PhotoImage(file=r"g3.png")
@@ -502,9 +145,528 @@ photoimage36 = photo36.subsample(3, 3)
 photoimage37 = photo37.subsample(3, 3)
 photoimage38 = photo38.subsample(3, 3)
 photoimagedome = photodome.subsample(3, 3)
+global vardata
+vardata = 0
+arraystatuse = arraystatus
+global sequence
+sequence = []
+global liste
+def arraycheck():
+    global liste
+    global seq1
+    global seq2
+    global seq3
+    global seq4
+    global seq5
+    global seq6
+    global seq7
+    global seq8
+    global seq9
+    global vardata
+    global ourvar
+    liste = len(sequence)
+    ourvar = 0
+    if liste == 1:
+        seq1 = sequence[0]
+        ourvarright = False
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimage = "g" + thedata + ".png"
+                thefileweneed = str(theimage)
+                photot = PhotoImage(file=thefileweneed)
+                print(photot)
+                photoimaget = photot.subsample(2, 2)
+                Button(root, image=photoimage35).place(x=1044, y=105)
+
+    if liste == 2:
+        seq2 = sequence[1]
+    if liste == 3:
+        seq3 = sequence[2]
+    if liste == 4:
+        seq4 = sequence[3]
+    if liste == 5:
+        seq5 = sequence[4]
+    if liste == 6:
+        seq6 = sequence[5]
+    if liste == 7:
+        seq7 = sequence[6]
+    if liste == 8:
+        seq8 = sequence[7]
+    if liste == 9:
+        seq9 = sequence[8]
+
+def sym1():
+    global symb1
+    global vardata
+    symb1 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        print(arraystatus)
+        sequence.append("sym1")
+        vardata = 1
+        arraycheck()
+def sym2(sy1=symb1):
+    global symb2
+    global vardata
+    symb2 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym2")
+        vardata = 2
+        arraycheck()
+
+def sym3():
+    global symb3
+    global vardata
+    symb3 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym3")
+        vardata = 3
+        arraycheck()
+def sym4():
+    global symb4
+    global vardata
+    symb4 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym4")
+        vardata = 4
+        arraycheck()
+def sym5():
+    global symb5
+    global vardata
+    symb5 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym5")
+        vardata = 5
+        arraycheck()
+def sym6():
+    global symb6
+    global vardata
+    symb6 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym6")
+        vardata = 6
+        arraycheck()
+def sym7():
+    global symb7
+    global vardata
+    symb7 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym7")
+        vardata = 7
+        arraycheck()
+def sym8():
+    global symb8
+    global vardata
+    symb8 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym8")
+        vardata = 8
+        arraycheck()
+def sym9():
+    global symb9
+    global vardata
+    symb9 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym9")
+        vardata = 9
+        arraycheck()
+def sym10():
+    global symb10
+    global vardata
+    symb10 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym10")
+        vardata = 10
+        arraycheck()
+def sym11():
+    global symb11
+    global vardata
+    symb11 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym11")
+        vardata = 11
+        arraycheck()
+def sym12():
+    global symb12
+    global vardata
+    symb12 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym12")
+        vardata = 12
+        arraycheck()
+def sym13():
+    global symb13
+    global vardata
+    symb13 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym13")
+        arraycheck()
+        vardata = 13
+def sym14():
+    global symb14
+    global vardata
+    symb14 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym14")
+        arraycheck()
+        vardata = 14
+def sym15():
+    global symb15
+    global vardata
+    symb15 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym15")
+        arraycheck()
+        vardata = 15
+def sym16():
+    global symb16
+    global vardata
+    symb16 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym16")
+        arraycheck()
+        vardata = 16
+def sym17():
+    global symb17
+    global vardata
+    symb17 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym17")
+        arraycheck()
+        vardata = 17
+def sym18():
+    global symb18
+    global vardata
+    symb18 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym18")
+        arraycheck()
+        vardata = 18
+def sym19():
+    global symb19
+    global vardata
+    symb19 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym19")
+        arraycheck()
+        vardata = 19
+
+def sym20():
+    global symb20
+    global vardata
+    symb20 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym20")
+        arraycheck()
+        vardata = 20
+def sym21():
+    global symb21
+    global vardata
+    symb21 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym21")
+        arraycheck()
+        vardata = 21
+def sym22():
+    global symb22
+    global vardata
+    symb22 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym22")
+        arraycheck()
+        vardata = 22
+def sym23():
+    global symb23
+    global vardata
+    symb23 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym23")
+        arraycheck()
+        vardata = 23
+def sym24():
+    global symb24
+    global vardata
+    symb24 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym24")
+        arraycheck()
+        vardata = 24
+def sym25():
+    global symb25
+    global vardata
+    symb25 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym25")
+        arraycheck()
+        vardata = 25
+def sym26():
+    global symb26
+    global vardata
+    symb26 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym26")
+        vardata = 26
+        arraycheck()
+def sym27():
+    global symb27
+    global vardata
+    symb27 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym27")
+        vardata = 27
+        arraycheck()
+def sym28():
+    global symb28
+    global vardata
+    symb28 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym28")
+        vardata = 28
+        arraycheck()
+def sym29():
+    global symb29
+    global vardata
+    symb29 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym29")
+        vardata = 29
+        arraycheck()
+
+
+def sym30():
+    global symb30
+    global vardata
+    symb30 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym30")
+        vardata = 30
+        arraycheck()
+def sym31():
+    global symb31
+    global vardata
+    symb31 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym31")
+        vardata = 31
+        arraycheck()
+def sym32():
+    global symb32
+    global vardata
+    symb32 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym32")
+        vardata = 32
+        arraycheck()
+def sym33():
+    global symb33
+    global vardata
+    symb33 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym33")
+        vardata = 33
+        arraycheck()
+def sym34():
+    global symb34
+    global vardata
+    symb34 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym34")
+        vardata = 34
+        arraycheck()
+def sym35():
+    global symb35
+    global vardata
+    symb35 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym35")
+        vardata = 35
+        arraycheck()
+def sym36():
+    global symb36
+    global vardata
+    symb36 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym36")
+        vardata = 36
+        arraycheck()
+def sym37():
+    global symb37
+    global vardata
+    symb37 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym37")
+        vardata = 37
+        arraycheck()
+def sym38():
+    global symb38
+    global vardata
+    symb38 = 1
+    global arraystatus
+    arraystatus = arraystatus + 1
+    global sequence
+    if arraystatus <10:
+        sequence.append("sym38")
+        vardata = 38
+        arraycheck()
+datacompare = "data"
+def symdome():
+    global sequence
+    global datacompare
+    stargatecode = Path("data.json")
+    sequencestr = str(sequence)
+    datat = sequencestr.replace(", ", "")
+    datatt = datat.replace("\'", " ")
+    datattt = datatt.replace("[", "")
+    datatttt = datattt.replace("   ", "")
+    datattttt = datatttt.replace("]", "")
+    datatttttt = datattttt.replace(" \"", "")
+    finaldata = datatttttt.replace("\" ", "")
+    datacompare = finaldata.replace("  ", " ")
+    if stargatecode.is_file():
+        f = open('data.json', )
+        data = json.load(f)
+        comparestring = str(data)
+        print(comparestring)
+        print("json data ^^^ your datas below")
+        print(datacompare)
+        if datacompare == comparestring:
+            print("all your code works you may login")
+            root.destroy()
+            f.close
+    else:
+        print("creating new file")
+        with open('data.json', 'w') as f:
+            json.dump(datacompare, f)
+            f.close
+
+def reset():
+    global sequence
+    sequence.clear()
+
+img = PhotoImage(file=r'background.png')
+w, h = img.width(), img.height()
+background_image=img
+background_label = Label(root, image=background_image)
+background_label.place(x=0, y=25, relwidth=1, relheight=1)
 
 Button(root, image=photoimage1, # 1
        command=sym1).place(x=20,y=10)
+
 
 Button(root, image=photoimage2, # 2
        command=sym2).place(x=60,y=10)
@@ -627,6 +789,8 @@ Button(root, image=photoimagedome,#dome
 def on_closing():
     root.lift()
     pass
+
+
 root.attributes('-fullscreen', True)
 root.resizable(False, False)
 root.attributes('-topmost', True)
