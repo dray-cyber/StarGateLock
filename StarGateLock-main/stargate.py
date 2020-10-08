@@ -168,6 +168,15 @@ def arraycheck():
     global thefileweneed
     global photot
     global photoimaget
+    global custom
+    global custom1
+    global custom2
+    global custom3
+    global custom4
+    global custom5
+    global custom6
+    global custom7
+    global custom8
     liste = len(sequence)
     ourvar = 0
     if liste == 1:
@@ -185,7 +194,8 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneed)
                 photot = photot.subsample(2,2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=98)
+                custom = photoimaget
+                Button(root, image=custom).place(x=950, y=98)
     if liste == 2:
         seq2 = sequence[1]
         ourvarright = False
@@ -202,7 +212,8 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneedt)
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=182)
+                custom1 = photoimaget
+                Button(root, image=custom1).place(x=950, y=182)
     if liste == 3:
         seq3 = sequence[2]
         ourvarright = False
@@ -219,7 +230,8 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneedt)
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=266)
+                custom2 = photoimaget
+                Button(root, image=custom2).place(x=950, y=266)
     if liste == 4:
         seq4 = sequence[3]
         ourvarright = False
@@ -236,7 +248,8 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneedt)
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=350)
+                custom3 = photoimaget
+                Button(root, image=custom3).place(x=950, y=350)
     if liste == 5:
         seq5 = sequence[4]
         ourvarright = False
@@ -253,7 +266,8 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneedt)
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=434)
+                custom4 = photoimaget
+                Button(root, image=custom4).place(x=950, y=434)
     if liste == 6:
         seq6 = sequence[5]
         ourvarright = False
@@ -270,7 +284,8 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneedt)
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=520)
+                custom5 = photoimaget
+                Button(root, image=custom5).place(x=950, y=520)
     if liste == 7:
         seq7 = sequence[6]
         ourvarright = False
@@ -287,11 +302,45 @@ def arraycheck():
                 photot = PhotoImage(file=thefileweneedt)
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=950, y=604)
+                custom6 = photoimaget
+                Button(root, image=custom6).place(x=950, y=604)
     if liste == 8:
         seq8 = sequence[7]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                custom7 = photoimaget
+                Button(root, image=custom7).place(x=1117, y=98)
+
     if liste == 9:
         seq9 = sequence[8]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                custom8 = photoimaget
+                Button(root, image=custom8).place(x=1117, y=182)
 
 def sym1():
     global symb1
@@ -872,7 +921,7 @@ Button(root, image=photoimage37,#37
 Button(root, image=photoimage38,#38
        command=sym38).place(x=260,y=50)
 Button(root, text="reset",#reset
-       command=reset).place(x=300,y=50)
+       command=reset).place(x=1125,y=290)
 def resetw():
     root.destroy()
 Button(root, text="reset window",#reset
