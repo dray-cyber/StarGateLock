@@ -622,7 +622,6 @@ Button(root, text="reset window",#reset
        command=resetw).place(x=350,y=50)
 Button(root, image=photoimagedome,#dome
        command=symdome).place(x=1100,y=550)
-
 def on_closing():
     root.lift()
     pass
@@ -630,5 +629,13 @@ root.attributes('-fullscreen', True)
 root.resizable(False, False)
 root.attributes('-topmost', True)
 root.protocol("WM_DELETE_WINDOW", on_closing)
+wenh = root.winfo_height()
+wenw = root.winfo_width()
+print(wenw)
+print(wenh)
+canvas = Canvas(root, width = 400, height = 400)
+canvas.pack()
+img = PhotoImage(file=r"background.png")
+canvas.create_image(wenw,wenh, anchor=NW, image=img)
 
 mainloop()
