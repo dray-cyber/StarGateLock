@@ -395,7 +395,6 @@ def symdome():
         f = open('data.json', )
         data = json.load(f)
         comparestring = str(data)
-        print(comparestring)
         print(datacompare)
         if datacompare == comparestring:
             print("all your code works you may login")
@@ -403,8 +402,11 @@ def symdome():
     else:
         print("creating new file")
         with open('data.json', 'w') as f:
-            json.dump(data, f)
-
+            json.dump(datacompare, f)
+            f.close
+def reset():
+    global sequence
+    sequence.clear()
 
 Label(root, text='StarGateLock', font=(
     'Verdana', 15)).pack(side=TOP, pady=10)
@@ -609,13 +611,9 @@ Button(root, image=photoimage37,#37
 
 Button(root, image=photoimage38,#38
        command=sym38).place(x=260,y=50)
+Button(root, text="reset",#reset
+       command=reset).place(x=300,y=50)
 
 Button(root, image=photoimagedome,#dome
        command=symdome).place(x=1100,y=550)
-
-stargatecode = Path("data.json")
-if stargatecode.is_file():
-    print("theres a file :c")
-else:
-    print("nope no file")
 mainloop()
