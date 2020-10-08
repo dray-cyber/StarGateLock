@@ -180,24 +180,114 @@ def arraycheck():
             else:
                 ourvarright = True
                 thedata = str(ourvar)
-                theimage = 'g' + thedata + '.png'
+                theimage = 'gg' + thedata + '.png'
                 thefileweneed = str(theimage)
                 photot = PhotoImage(file=thefileweneed)
+                photot = photot.subsample(2,2)
                 photoimaget = photot.subsample(1, 1)
-                Button(root, image=photoimaget).place(x=1035, y=105)
-
+                Button(root, image=photoimaget).place(x=950, y=98)
     if liste == 2:
         seq2 = sequence[1]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=950, y=182)
     if liste == 3:
         seq3 = sequence[2]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=950, y=266)
     if liste == 4:
         seq4 = sequence[3]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=950, y=350)
     if liste == 5:
         seq5 = sequence[4]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=950, y=434)
     if liste == 6:
         seq6 = sequence[5]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=950, y=520)
     if liste == 7:
         seq7 = sequence[6]
+        ourvarright = False
+        ourvar = 0
+        while ourvarright == False:
+            if vardata != ourvar:
+                ourvar = ourvar + 1
+
+            else:
+                ourvarright = True
+                thedata = str(ourvar)
+                theimaget = 'gg' + thedata + '.png'
+                thefileweneedt = str(theimaget)
+                photot = PhotoImage(file=thefileweneedt)
+                photot = photot.subsample(2, 2)
+                photoimaget = photot.subsample(1, 1)
+                Button(root, image=photoimaget).place(x=950, y=604)
     if liste == 8:
         seq8 = sequence[7]
     if liste == 9:
