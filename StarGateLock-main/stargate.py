@@ -400,7 +400,8 @@ def symdome():
         print(datacompare)
         if datacompare == comparestring:
             print("all your code works you may login")
-        f.close
+            root.destroy()
+            f.close
     else:
         print("creating new file")
         with open('data.json', 'w') as f:
@@ -615,7 +616,19 @@ Button(root, image=photoimage38,#38
        command=sym38).place(x=260,y=50)
 Button(root, text="reset",#reset
        command=reset).place(x=300,y=50)
-
+def resetw():
+    root.destroy()
+Button(root, text="reset window",#reset
+       command=resetw).place(x=350,y=50)
 Button(root, image=photoimagedome,#dome
        command=symdome).place(x=1100,y=550)
+
+def on_closing():
+    root.lift()
+    pass
+root.attributes('-fullscreen', True)
+root.resizable(False, False)
+root.attributes('-topmost', True)
+root.protocol("WM_DELETE_WINDOW", on_closing)
+
 mainloop()
