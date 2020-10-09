@@ -8,6 +8,7 @@ import time
 import tkinter as tk
 import tkinter.ttk as ttk
 import os
+
 root = Tk()
 lb = tk.Listbox(root)
 lb.pack()
@@ -55,6 +56,7 @@ if apple != 1:
     symb27 = 0
     symb28 = 0
     symb29 = 0
+    backgroundupdated = False
     symb30 = 0
     arraystatus = 0
     symb31 = 0
@@ -119,6 +121,16 @@ photo36 = PhotoImage(file=r"g36.png")
 photo37 = PhotoImage(file=r"g37.png")
 photo38 = PhotoImage(file=r"g38.png")
 photodome = PhotoImage(file=r"dhd.png")
+chev0 = PhotoImage(file=r"chev0.png")
+chev1 = PhotoImage(file=r"chev1.png")
+chev2 = PhotoImage(file=r"chev2.png")
+chev3 = PhotoImage(file=r"chev3.png")
+chev4 = PhotoImage(file=r"chev4.png")
+chev5 = PhotoImage(file=r"chev5.png")
+chev6 = PhotoImage(file=r"chev6.png")
+chev7 = PhotoImage(file=r"chev7.png")
+chev8 = PhotoImage(file=r"chev8.png")
+chev9 = PhotoImage(file=r"chev9.png")
 
 photoimage1 = photo1.subsample(3, 3)
 photoimage2 = photo2.subsample(3, 3)
@@ -161,6 +173,18 @@ photoimage35 = photo35.subsample(3, 3)
 photoimage36 = photo36.subsample(3, 3)
 photoimage37 = photo37.subsample(3, 3)
 photoimage38 = photo38.subsample(3, 3)
+
+chevron0 = chev0
+chevron1 = chev1
+chevron2 = chev2
+chevron3 = chev3
+chevron4 = chev4
+chevron5 = chev5
+chevron6 = chev6
+chevron7 = chev7
+chevron8 = chev8
+chevron9 = chev9
+
 photoimagedome = photodome.subsample(3, 3)
 global vardata
 vardata = 0
@@ -196,10 +220,15 @@ def arraycheck():
     global custom7
     global custom8
     global gate
+    global img
+    global chevron1
+    global backgroundupdated
+    global confirmed
     liste = len(sequence)
     ourvar = 0
     if liste == 1:
         seq1 = sequence[0]
+        img = chevron1
         ourvarright = False
         while ourvarright == False:
             if vardata != ourvar:
@@ -215,6 +244,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom = photoimaget
                 global myl1
+                img = chevron1
+                panel.configure(image=img)
+                panel.image = img
                 myl1 = Button(root, image=custom, command=ref1)
                 myl1.pack()
                 myl1.place(x=950, y=98)
@@ -236,6 +268,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom1 = photoimaget
                 global myl2
+                img = chevron2
+                panel.configure(image=img)
+                panel.image = img
                 myl2 = Button(root, image=custom1, command=ref2)
                 myl2.pack()
                 myl2.place(x=950, y=192)
@@ -257,6 +292,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom2 = photoimaget
                 global myl3
+                img = chevron3
+                panel.configure(image=img)
+                panel.image = img
                 myl3 = Button(root, image=custom2, command=ref3)
                 myl3.pack()
                 myl3.place(x=950, y=266)
@@ -278,6 +316,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom3 = photoimaget
                 global myl4
+                img = chevron4
+                panel.configure(image=img)
+                panel.image = img
                 myl4 = Button(root, image=custom3, command=ref4)
                 myl4.pack()
                 myl4.place(x=950, y=350)
@@ -299,6 +340,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom4 = photoimaget
                 global myl5
+                img = chevron5
+                panel.configure(image=img)
+                panel.image = img
                 myl5 = Button(root, image=custom4, command=ref5)
                 myl5.pack()
                 myl5.place(x=950, y=434)
@@ -320,6 +364,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom5 = photoimaget
                 global myl6
+                img = chevron6
+                panel.configure(image=img)
+                panel.image = img
                 myl6 = Button(root, image=custom5, command=ref6)
                 myl6.pack()
                 myl6.place(x=950, y=520)
@@ -341,6 +388,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom6 = photoimaget
                 global myl7
+                img = chevron7
+                panel.configure(image=img)
+                panel.image = img
                 myl7 = Button(root, image=custom6, command=ref7)
                 myl7.pack()
                 myl7.place(x=950, y=604)
@@ -363,6 +413,9 @@ def arraycheck():
                 custom7 = photoimaget
                 ourvarright = True
                 global myl8
+                img = chevron8
+                panel.configure(image=img)
+                panel.image = img
                 myl8 = Button(root, image=custom7, command=ref8)
                 myl8.pack()
                 myl8.place(x=1117, y=98)
@@ -385,6 +438,9 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom8 = photoimaget
+                img = chevron9
+                panel.configure(image=img)
+                panel.image = img
                 myl9 = Button(root, image=custom8, command=ref9)
                 myl9.pack()
                 myl9.place(x=1117, y=182)
@@ -419,7 +475,7 @@ def sym1():
         sequence.append("sym1")
         vardata = 1
         arraycheck()
-def sym2(sy1=symb1):
+def sym2():
     global symb2
     global vardata
     symb2 = 1
@@ -869,6 +925,7 @@ def reset():
     global arraystatus
     sequence.clear()
     arraystatus = 0
+    img = chevron0
     ref1()
     ref2()
     ref3()
@@ -878,12 +935,11 @@ def reset():
     ref7()
     ref8()
     ref9()
-img = PhotoImage(file=r'background.png')
+img = chevron0
 w, h = img.width(), img.height()
-background_image=img
-background_label = Label(root, image=background_image)
-background_label.place(x=0, y=25, relwidth=1, relheight=1)
-
+panel = img
+panel = Label(root, image=img)
+panel.place(x=0, y=25, relwidth=1, relheight=1)
 Button(root, image=photoimage1, # 1
        command=sym1).place(x=20,y=10)
 
