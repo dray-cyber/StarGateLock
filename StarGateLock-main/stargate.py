@@ -1,8 +1,11 @@
 from tkinter import *
+import tkinter
 from tkinter.ttk import *
 from tkinter import Tk, Label, Button
 import json
 from pathlib import Path
+import time
+
 root = Tk()
 apple = 3
 if apple != 1:
@@ -154,6 +157,7 @@ global liste
 def arraycheck():
     global liste
     global seq1
+    global root
     global seq2
     global seq3
     global seq4
@@ -177,6 +181,7 @@ def arraycheck():
     global custom6
     global custom7
     global custom8
+    global gate
     liste = len(sequence)
     ourvar = 0
     if liste == 1:
@@ -195,7 +200,10 @@ def arraycheck():
                 photot = photot.subsample(2,2)
                 photoimaget = photot.subsample(1, 1)
                 custom = photoimaget
-                Button(root, image=custom).place(x=950, y=98)
+                global myl1
+                myl1 = Button(root, image=custom, command=ref1)
+                myl1.pack()
+                myl1.place(x=950, y=98)
     if liste == 2:
         seq2 = sequence[1]
         ourvarright = False
@@ -213,7 +221,10 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom1 = photoimaget
-                Button(root, image=custom1).place(x=950, y=182)
+                global myl2
+                myl2 = Button(root, image=custom1, command=ref2)
+                myl2.pack()
+                myl2.place(x=950, y=192)
     if liste == 3:
         seq3 = sequence[2]
         ourvarright = False
@@ -231,7 +242,10 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom2 = photoimaget
-                Button(root, image=custom2).place(x=950, y=266)
+                global myl3
+                myl3 = Button(root, image=custom2, command=ref3)
+                myl3.pack()
+                myl3.place(x=950, y=266)
     if liste == 4:
         seq4 = sequence[3]
         ourvarright = False
@@ -249,7 +263,10 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom3 = photoimaget
-                Button(root, image=custom3).place(x=950, y=350)
+                global myl4
+                myl4 = Button(root, image=custom3, command=ref4)
+                myl4.pack()
+                myl4.place(x=950, y=350)
     if liste == 5:
         seq5 = sequence[4]
         ourvarright = False
@@ -267,7 +284,10 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom4 = photoimaget
-                Button(root, image=custom4).place(x=950, y=434)
+                global myl5
+                myl5 = Button(root, image=custom4, command=ref5)
+                myl5.pack()
+                myl5.place(x=950, y=434)
     if liste == 6:
         seq6 = sequence[5]
         ourvarright = False
@@ -285,7 +305,10 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom5 = photoimaget
-                Button(root, image=custom5).place(x=950, y=520)
+                global myl6
+                myl6 = Button(root, image=custom5, command=ref6)
+                myl6.pack()
+                myl6.place(x=950, y=520)
     if liste == 7:
         seq7 = sequence[6]
         ourvarright = False
@@ -303,7 +326,10 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom6 = photoimaget
-                Button(root, image=custom6).place(x=950, y=604)
+                global myl7
+                myl7 = Button(root, image=custom6, command=ref7)
+                myl7.pack()
+                myl7.place(x=950, y=604)
     if liste == 8:
         seq8 = sequence[7]
         ourvarright = False
@@ -321,7 +347,11 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom7 = photoimaget
-                Button(root, image=custom7).place(x=1117, y=98)
+                ourvarright = True
+                global myl8
+                myl8 = Button(root, image=custom7, command=ref8)
+                myl8.pack()
+                myl8.place(x=1117, y=98)
 
     if liste == 9:
         seq9 = sequence[8]
@@ -333,6 +363,7 @@ def arraycheck():
 
             else:
                 ourvarright = True
+                global myl9
                 thedata = str(ourvar)
                 theimaget = 'gg' + thedata + '.png'
                 thefileweneedt = str(theimaget)
@@ -340,8 +371,28 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom8 = photoimaget
-                Button(root, image=custom8).place(x=1117, y=182)
+                myl9 = Button(root, image=custom8, command=ref9)
+                myl9.pack()
+                myl9.place(x=1117, y=182)
+def ref1():
+    myl1.destroy()
+def ref2():
+    myl2.destroy()
+def ref3():
+    myl3.destroy()
 
+def ref4():
+    myl4.destroy()
+def ref5():
+    myl5.destroy()
+def ref6():
+    myl6.destroy()
+def ref7():
+    myl7.destroy()
+def ref8():
+    myl8.destroy()
+def ref9():
+    myl9.destroy()
 def sym1():
     global symb1
     global vardata
@@ -766,8 +817,10 @@ def sym38():
         vardata = 38
         arraycheck()
 datacompare = "data"
+
 def symdome():
     global sequence
+    global frames
     global datacompare
     stargatecode = Path("data.json")
     sequencestr = str(sequence)
@@ -787,7 +840,10 @@ def symdome():
         print("json data ^^^ your datas below")
         print(datacompare)
         if datacompare == comparestring:
-            print("all your code works you may login")
+            root.destroy()
+
+            label = Label(root)
+            label.pack()
             root.destroy()
             f.close
     else:
@@ -798,8 +854,18 @@ def symdome():
 
 def reset():
     global sequence
+    global arraystatus
     sequence.clear()
-
+    arraystatus = 0
+    ref1()
+    ref2()
+    ref3()
+    ref4()
+    ref5()
+    ref6()
+    ref7()
+    ref8()
+    ref9()
 img = PhotoImage(file=r'background.png')
 w, h = img.width(), img.height()
 background_image=img
