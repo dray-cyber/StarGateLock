@@ -5,9 +5,23 @@ from tkinter import Tk, Label, Button
 import json
 from pathlib import Path
 import time
-
+import tkinter as tk
+import tkinter.ttk as ttk
+import os
 root = Tk()
+lb = tk.Listbox(root)
+lb.pack()
+
 apple = 3
+for file in os.listdir():
+    if file == 'wormhole.mp4':
+        lb.insert(0, file)
+
+def ffplay(event):
+    if lb.curselection():
+        file = "wormhole.mp4"
+        os.system("ffplay " + lb.get(file))
+
 if apple != 1:
     print("program has reset and works")
     symb1 = 0
@@ -840,8 +854,6 @@ def symdome():
         print("json data ^^^ your datas below")
         print(datacompare)
         if datacompare == comparestring:
-            root.destroy()
-
             label = Label(root)
             label.pack()
             root.destroy()
@@ -992,8 +1004,10 @@ def resetw():
     root.destroy()
 Button(root, text="reset window",#reset
        command=resetw).place(x=350,y=50)
-Button(root, image=photoimagedome,#dome
-       command=symdome).place(x=1100,y=550)
+bstart = ttk.Button(root, image=photoimagedome,#dome
+       command=symdome)
+bstart.pack()
+bstart.place(x=1100,y=550)
 def on_closing():
     root.lift()
     pass
