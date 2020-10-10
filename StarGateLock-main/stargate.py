@@ -8,7 +8,9 @@ import time
 import tkinter as tk
 import tkinter.ttk as ttk
 import os
-
+import pygame
+import time
+from time import sleep
 root = Tk()
 lb = tk.Listbox(root)
 lb.pack()
@@ -184,7 +186,7 @@ chevron6 = chev6
 chevron7 = chev7
 chevron8 = chev8
 chevron9 = chev9
-
+pygame.mixer.init()
 photoimagedome = photodome.subsample(3, 3)
 global vardata
 vardata = 0
@@ -244,12 +246,16 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom = photoimaget
                 global myl1
-                img = chevron1
-                panel.configure(image=img)
-                panel.image = img
                 myl1 = Button(root, image=custom, command=ref1)
                 myl1.pack()
                 myl1.place(x=950, y=98)
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
+                img = chevron1
+                panel.configure(image=img)
+                panel.image = img
+
     if liste == 2:
         seq2 = sequence[1]
         ourvarright = False
@@ -269,6 +275,9 @@ def arraycheck():
                 custom1 = photoimaget
                 global myl2
                 img = chevron2
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl2 = Button(root, image=custom1, command=ref2)
@@ -293,6 +302,9 @@ def arraycheck():
                 custom2 = photoimaget
                 global myl3
                 img = chevron3
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl3 = Button(root, image=custom2, command=ref3)
@@ -317,6 +329,9 @@ def arraycheck():
                 custom3 = photoimaget
                 global myl4
                 img = chevron4
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl4 = Button(root, image=custom3, command=ref4)
@@ -341,6 +356,9 @@ def arraycheck():
                 custom4 = photoimaget
                 global myl5
                 img = chevron5
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl5 = Button(root, image=custom4, command=ref5)
@@ -365,6 +383,9 @@ def arraycheck():
                 custom5 = photoimaget
                 global myl6
                 img = chevron6
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl6 = Button(root, image=custom5, command=ref6)
@@ -389,6 +410,9 @@ def arraycheck():
                 custom6 = photoimaget
                 global myl7
                 img = chevron7
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl7 = Button(root, image=custom6, command=ref7)
@@ -414,6 +438,9 @@ def arraycheck():
                 ourvarright = True
                 global myl8
                 img = chevron8
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl8 = Button(root, image=custom7, command=ref8)
@@ -439,6 +466,9 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom8 = photoimaget
                 img = chevron9
+                pygame.mixer.music.load("stargatelock.mp3")
+                pygame.mixer.music.play()
+                sleep(1)
                 panel.configure(image=img)
                 panel.image = img
                 myl9 = Button(root, image=custom8, command=ref9)
