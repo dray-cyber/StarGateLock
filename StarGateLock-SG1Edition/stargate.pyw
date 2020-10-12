@@ -27,7 +27,6 @@ lb.pack()
 
 apple = 3
 if apple != 1:
-    print("program has reset and works")
     symb1 = 0
     symb2 = 0
     symb3 = 0
@@ -82,7 +81,6 @@ if apple != 1:
     seq9 = 0
     apple = 1
     ourvar = 0
-    print("im not still running right")
 photo1 = PhotoImage(file=r"g1.png")
 photo2 = PhotoImage(file=r"g2.png")
 photo3 = PhotoImage(file=r"g3.png")
@@ -526,7 +524,6 @@ def sym1():
     arraystatus = arraystatus + 1
     global sequence
     if arraystatus <10:
-        print(arraystatus)
         sequence.append("sym1")
         vardata = 1
         arraycheck()
@@ -979,16 +976,12 @@ def symdome():
         f = open('data.json', )
         data = json.load(f)
         comparestring = str(data)
-        print(comparestring)
-        print("json data ^^^ your datas below")
-        print(datacompare)
         if datacompare == comparestring:
             f.close
             sleep(1)
             root.attributes('-topmost', False)
             playmyaudio()
     else:
-        print("creating new file")
         with open('data.json', 'w') as f:
             json.dump(datacompare, f)
             f.close
