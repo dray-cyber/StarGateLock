@@ -946,7 +946,15 @@ def playmyaudio():
     pygame.mixer.init()
     pygame.mixer.music.load("gatestart.mp3")
     pygame.mixer.music.play()
+    activate()
 kill = 1
+img = chevron0
+w, h = img.width(), img.height()
+panel = img
+panel = Label(root, image=img)
+panel.place(x=0, y=25, relwidth=1, relheight=1)
+btn1 = Button(root, image=photoimage1, command=sym1)
+btn1.place(x=20,y=10)
 def symdome():
     global sequence
     global root
@@ -976,26 +984,24 @@ def symdome():
         print(datacompare)
         if datacompare == comparestring:
             f.close
-            playmyaudio()
-            root.attributes('-topmost', False)
             sleep(1)
-            pygame.display.set_caption('Desktop and beyond!')
-            clip = VideoFileClip('wormhole.mp4')
-            clip.preview(fps=60, fullscreen=True)
-            root.destroy()
+            root.attributes('-topmost', False)
+            playmyaudio()
     else:
         print("creating new file")
         with open('data.json', 'w') as f:
             json.dump(datacompare, f)
             f.close
-    if kill == 2:
-        sleep(10)
-        root.destroy
 def proced():
     global img
     img = enter
     panel.configure(image=img)
     panel.image = img
+def activate():
+    pygame.display.set_caption('Desktop and beyond!')
+    clip = VideoFileClip('wormhole.mp4')
+    clip.preview(fps=60, fullscreen=True)
+    root.destroy()
 def reset():
     global sequence
     global arraystatus
@@ -1014,13 +1020,7 @@ def reset():
     ref8()
     ref9()
 
-img = chevron0
-w, h = img.width(), img.height()
-panel = img
-panel = Label(root, image=img)
-panel.place(x=0, y=25, relwidth=1, relheight=1)
-btn1 = Button(root, image=photoimage1, command=sym1)
-btn1.place(x=20,y=10)
+
 
 
 Button(root, image=photoimage2, # 2
