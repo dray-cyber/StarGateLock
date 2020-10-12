@@ -9,22 +9,20 @@ import tkinter as tk
 import tkinter.ttk as ttk
 import os
 import pygame
+import sys
 import time
 from time import sleep
+import tkinter as tk, threading
+import imageio
+from PIL import Image, ImageTk
+from moviepy.editor import *
+import pygame
+pygame.init()
 root = Tk()
 lb = tk.Listbox(root)
 lb.pack()
 
 apple = 3
-for file in os.listdir():
-    if file == 'wormhole.mp4':
-        lb.insert(0, file)
-
-def ffplay(event):
-    if lb.curselection():
-        file = "wormhole.mp4"
-        os.system("ffplay " + lb.get(file))
-
 if apple != 1:
     print("program has reset and works")
     symb1 = 0
@@ -35,6 +33,7 @@ if apple != 1:
     symb6 = 0
     symb7 = 0
     symb8 = 0
+    timeout = False
     symb9 = 0
     symb10 = 0
 
@@ -133,7 +132,11 @@ chev6 = PhotoImage(file=r"chev6.png")
 chev7 = PhotoImage(file=r"chev7.png")
 chev8 = PhotoImage(file=r"chev8.png")
 chev9 = PhotoImage(file=r"chev9.png")
+blank = PhotoImage(file=r"blank.png")
+enter1 = PhotoImage(file=r"enter.png")
 
+enter = enter1.zoom(3, 3)
+blankpic = blank.subsample(3, 3)
 photoimage1 = photo1.subsample(3, 3)
 photoimage2 = photo2.subsample(3, 3)
 photoimage3 = photo3.subsample(3, 3)
@@ -226,6 +229,14 @@ def arraycheck():
     global chevron1
     global backgroundupdated
     global confirmed
+    global myltwo
+    global mylthree
+    global mylfour
+    global mylfive
+    global mylsix
+    global mylseven
+    global myleight
+    global mynine
     liste = len(sequence)
     ourvar = 0
     if liste == 1:
@@ -245,10 +256,10 @@ def arraycheck():
                 photot = photot.subsample(2,2)
                 photoimaget = photot.subsample(1, 1)
                 custom = photoimaget
-                global myl1
-                myl1 = Button(root, image=custom, command=ref1)
-                myl1.pack()
-                myl1.place(x=950, y=98)
+                global mylone
+                mylone = Button(root, image=custom, command=ref1)
+                mylone.pack()
+                mylone.place(x=950, y=98)
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
@@ -273,16 +284,16 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom1 = photoimaget
-                global myl2
                 img = chevron2
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
+                global myltwo
                 panel.configure(image=img)
                 panel.image = img
-                myl2 = Button(root, image=custom1, command=ref2)
-                myl2.pack()
-                myl2.place(x=950, y=192)
+                myltwo = Button(root, image=custom1, command=ref2)
+                myltwo.pack()
+                myltwo.place(x=950, y=192)
     if liste == 3:
         seq3 = sequence[2]
         ourvarright = False
@@ -300,16 +311,17 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom2 = photoimaget
-                global myl3
+                global mylthree
                 img = chevron3
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl3 = Button(root, image=custom2, command=ref3)
-                myl3.pack()
-                myl3.place(x=950, y=266)
+                mylthree = Button(root, image=custom2, command=ref3)
+                mylthree.pack()
+                mylthree.place(x=950, y=266)
+
     if liste == 4:
         seq4 = sequence[3]
         ourvarright = False
@@ -327,16 +339,16 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom3 = photoimaget
-                global myl4
+                global mylfour
                 img = chevron4
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl4 = Button(root, image=custom3, command=ref4)
-                myl4.pack()
-                myl4.place(x=950, y=350)
+                mylfour = Button(root, image=custom3, command=ref4)
+                mylfour.pack()
+                mylfour.place(x=950, y=350)
     if liste == 5:
         seq5 = sequence[4]
         ourvarright = False
@@ -354,16 +366,16 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom4 = photoimaget
-                global myl5
+                global mylfive
                 img = chevron5
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl5 = Button(root, image=custom4, command=ref5)
-                myl5.pack()
-                myl5.place(x=950, y=434)
+                mylfive = Button(root, image=custom4, command=ref5)
+                mylfive.pack()
+                mylfive.place(x=950, y=434)
     if liste == 6:
         seq6 = sequence[5]
         ourvarright = False
@@ -381,16 +393,16 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom5 = photoimaget
-                global myl6
+                global mylsix
                 img = chevron6
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl6 = Button(root, image=custom5, command=ref6)
-                myl6.pack()
-                myl6.place(x=950, y=520)
+                mylsix = Button(root, image=custom5, command=ref6)
+                mylsix.pack()
+                mylsix.place(x=950, y=520)
     if liste == 7:
         seq7 = sequence[6]
         ourvarright = False
@@ -408,16 +420,16 @@ def arraycheck():
                 photot = photot.subsample(2, 2)
                 photoimaget = photot.subsample(1, 1)
                 custom6 = photoimaget
-                global myl7
+                global mylseven
                 img = chevron7
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl7 = Button(root, image=custom6, command=ref7)
-                myl7.pack()
-                myl7.place(x=950, y=604)
+                mylseven = Button(root, image=custom6, command=ref7)
+                mylseven.pack()
+                mylseven.place(x=950, y=604)
     if liste == 8:
         seq8 = sequence[7]
         ourvarright = False
@@ -436,16 +448,16 @@ def arraycheck():
                 photoimaget = photot.subsample(1, 1)
                 custom7 = photoimaget
                 ourvarright = True
-                global myl8
+                global myleight
                 img = chevron8
                 pygame.mixer.music.load("stargatelock.mp3")
                 pygame.mixer.music.play()
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl8 = Button(root, image=custom7, command=ref8)
-                myl8.pack()
-                myl8.place(x=1117, y=98)
+                myleight = Button(root, image=custom7, command=ref8)
+                myleight.pack()
+                myleight.place(x=1117, y=98)
 
     if liste == 9:
         seq9 = sequence[8]
@@ -457,7 +469,7 @@ def arraycheck():
 
             else:
                 ourvarright = True
-                global myl9
+                global mylnine
                 thedata = str(ourvar)
                 theimaget = 'gg' + thedata + '.png'
                 thefileweneedt = str(theimaget)
@@ -471,28 +483,38 @@ def arraycheck():
                 sleep(1)
                 panel.configure(image=img)
                 panel.image = img
-                myl9 = Button(root, image=custom8, command=ref9)
-                myl9.pack()
-                myl9.place(x=1117, y=182)
+                mylnine = Button(root, image=custom8, command=ref9)
+                mylnine.pack()
+                mylnine.place(x=1117, y=182)
 def ref1():
-    myl1.destroy()
-def ref2():
-    myl2.destroy()
-def ref3():
-    myl3.destroy()
+    global mylone
+    mylone.destroy()
 
+def ref2():
+    global myltwp
+    myltwo.destroy()
+
+def ref3():
+    global mylthree
+    mylthree.destroy()
 def ref4():
-    myl4.destroy()
+    global mylfour
+    mylfour.destroy()
 def ref5():
-    myl5.destroy()
+    global mylfive
+    mylfive.destroy()
 def ref6():
-    myl6.destroy()
+    global mylsix
+    mylsix.destroy()
 def ref7():
-    myl7.destroy()
+    global mylseven
+    mylseven.destroy()
 def ref8():
-    myl8.destroy()
+    global myleight
+    myleight.destroy()
 def ref9():
-    myl9.destroy()
+    global mylnine
+    mylnine.destroy()
 def sym1():
     global symb1
     global vardata
@@ -917,11 +939,20 @@ def sym38():
         vardata = 38
         arraycheck()
 datacompare = "data"
-
+def playmyaudio():
+    pygame.mixer.init()
+    pygame.mixer.music.load("gatestart.mp3")
+    pygame.mixer.music.play()
+kill = 1
 def symdome():
     global sequence
+    global root
     global frames
     global datacompare
+    global img
+    global enter
+    global panel
+    global kill
     stargatecode = Path("data.json")
     sequencestr = str(sequence)
     datat = sequencestr.replace(", ", "")
@@ -932,6 +963,14 @@ def symdome():
     datatttttt = datattttt.replace(" \"", "")
     finaldata = datatttttt.replace("\" ", "")
     datacompare = finaldata.replace("  ", " ")
+    pygame.mixer.init()
+    pygame.mixer.music.load("wormhole.mp3")
+    pygame.display.set_caption('Desktop and beyond!')
+    clip = VideoFileClip('wormhole.mp4')
+    clip.preview()
+
+
+    pygame.quit()
     if stargatecode.is_file():
         f = open('data.json', )
         data = json.load(f)
@@ -940,22 +979,32 @@ def symdome():
         print("json data ^^^ your datas below")
         print(datacompare)
         if datacompare == comparestring:
-            label = Label(root)
-            label.pack()
-            root.destroy()
             f.close
+            playmyaudio()
+            root.attributes('-topmost', False)
+            sleep(3)
+            kill = 2
     else:
         print("creating new file")
         with open('data.json', 'w') as f:
             json.dump(datacompare, f)
             f.close
-
+    if kill == 2:
+        sleep(10)
+        root.destroy
+def proced():
+    global img
+    img = enter
+    panel.configure(image=img)
+    panel.image = img
 def reset():
     global sequence
     global arraystatus
     sequence.clear()
     arraystatus = 0
     img = chevron0
+    panel.configure(image=img)
+    panel.image = img
     ref1()
     ref2()
     ref3()
@@ -965,13 +1014,14 @@ def reset():
     ref7()
     ref8()
     ref9()
+
 img = chevron0
 w, h = img.width(), img.height()
 panel = img
 panel = Label(root, image=img)
 panel.place(x=0, y=25, relwidth=1, relheight=1)
-Button(root, image=photoimage1, # 1
-       command=sym1).place(x=20,y=10)
+btn1 = Button(root, image=photoimage1, command=sym1)
+btn1.place(x=20,y=10)
 
 
 Button(root, image=photoimage2, # 2
