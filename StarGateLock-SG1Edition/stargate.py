@@ -943,6 +943,7 @@ def playmyaudio():
     pygame.mixer.init()
     pygame.mixer.music.load("gatestart.mp3")
     pygame.mixer.music.play()
+    sleep(2)
     activate()
 kill = 1
 img = chevron0
