@@ -17,6 +17,9 @@ import imageio
 from PIL import Image, ImageTk
 from moviepy.editor import *
 import pygame
+import imageio
+from moviepy.editor import VideoFileClip
+from moviepy.video.fx.resize import resize
 pygame.init()
 root = Tk()
 lb = tk.Listbox(root)
@@ -964,13 +967,6 @@ def symdome():
     finaldata = datatttttt.replace("\" ", "")
     datacompare = finaldata.replace("  ", " ")
     pygame.mixer.init()
-    pygame.mixer.music.load("wormhole.mp3")
-    pygame.display.set_caption('Desktop and beyond!')
-    clip = VideoFileClip('wormhole.mp4')
-    clip.preview()
-
-
-    pygame.quit()
     if stargatecode.is_file():
         f = open('data.json', )
         data = json.load(f)
@@ -982,8 +978,11 @@ def symdome():
             f.close
             playmyaudio()
             root.attributes('-topmost', False)
-            sleep(3)
-            kill = 2
+            sleep(1)
+            pygame.display.set_caption('Desktop and beyond!')
+            clip = VideoFileClip('wormhole.mp4')
+            clip.preview(fps=60, fullscreen=True)
+            root.destroy()
     else:
         print("creating new file")
         with open('data.json', 'w') as f:
@@ -1155,4 +1154,3 @@ root.attributes('-topmost', True)
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
 mainloop()
- 
