@@ -1,7 +1,11 @@
 import tkinter as tk
 import os
 root = tk.Tk()
+apple = 0
 
+if apple != 2:
+    worked = False
+    apple = 2
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 if worked == False:
@@ -19,3 +23,4 @@ if worked == False:
         worked = True
 else:
     os.system('cmd /c pythonw.exe stargate.py')
+    worked = True
